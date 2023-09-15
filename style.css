@@ -1,0 +1,94 @@
+* {
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: inherit;
+  background-image: linear-gradient(to right top,
+      #c233a9,
+      #9d64d4,
+      #6b85ec,
+      #309ff2,
+      #12b3eb);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(121, 232, 232, 0.434);
+  margin-bottom: 2rem;
+}
+nav a {
+  padding: 5px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#game {
+  background-image: url(./image/bg.png);
+  margin: auto;
+  width: 480px;
+  height: 640px;
+  border-radius: 40px;
+  border: 6px solid black;
+  overflow: hidden;
+}
+
+#block {
+  width: 50px;
+  height: 565px;
+  left: 400px;
+  position: relative;
+  background-image: url(./image/block.png);
+  animation: block 2s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 480px;
+  }
+
+  100% {
+    left: -50px;
+  }
+}
+
+#hole {
+  width: 50px;
+  height: 150px;
+  background-color: rgb(62, 201, 255);
+  position: relative;
+  left: 400px;
+  top: -500px;
+  animation: block 2s infinite linear;
+}
+
+#character {
+  width: 32px;
+  height: 32px;
+  background-image: url(./image/character.png);
+  position: absolute;
+}
+
+#score {
+  padding-left: 40px;
+  height: 40px;
+  top: 100px;
+  position: absolute;
+}
+
+.m-left {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+}
